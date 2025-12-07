@@ -1,0 +1,8 @@
+Using GitHub Copilot in this assignment helped me generate the initial structure for two of my functions: handle_missing_values and remove_invalid_rows. Copilot suggested reasonable starting points based on the comments I wrote above each function, but I still had to make several changes to make the code work correctly for my dataset.
+
+For handle_missing_values, Copilot gave me a basic version that only stripped spaces and converted price and qty to numeric types. After reviewing the raw data, I realized that this wasn’t enough because the product names had inconsistent spacing and capitalization. I modified the function by adding .str.replace() to collapse multiple spaces and .str.title() to standardize product names. These changes made the data more consistent and prevented duplicate rows caused by formatting differences. Copilot did not automatically add these steps—I had to adjust the code myself based on how the output looked.
+
+For remove_invalid_rows, Copilot generated a simple filter that removed rows with non-positive price or quantity. This suggestion was correct, but I still reviewed the logic to make sure it fit the assignment’s requirements. I kept Copilot’s version but added it as part of a larger cleaning pipeline that includes date validation and category normalization.
+
+Overall, Copilot was useful for quickly generating function templates, but it did not fully solve the cleaning issues on its own. I had to modify and expand the suggestions so they would match the problems in my actual dataset. This assignment helped me understand how Copilot can speed up coding, but also why human review and manual adjustments are still important.
+
